@@ -3,7 +3,7 @@ cache: bundler
 
 addons:
   code_climate:
-    repo_token: 6a35c6e0e4071f26edeb8b2f2ef04d201d5b9ccd04a66be2f351f0ac99c68dc7 
+    repo_token: 6a35c6e0e4071f26edeb8b2f2ef04d201d5b9ccd04a66be2f351f0ac99c68dc7
 
 
 rvm:
