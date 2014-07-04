@@ -2,6 +2,11 @@
 
 Adds class method `fluent_accessor` which will create several methods to enable fluent API access to the instance variables.
 
+[![Gem Version](https://badge.fury.io/rb/fluent_accessors.svg)](http://badge.fury.io/rb/fluent_accessors)
+[![Build Status](https://travis-ci.org/eturino/fluent_accessors.svg?branch=master)](https://travis-ci.org/eturino/fluent_accessors)
+[![Code Climate](https://codeclimate.com/github/eturino/fluent_accessors.png)](https://codeclimate.com/github/eturino/fluent_accessors)
+[![Code Climate Coverage](https://codeclimate.com/github/eturino/fluent_accessors/coverage.png)](https://codeclimate.com/github/eturino/fluent_accessors)
+
 ## Dependencies
 
 it requires Ruby 2, since it uses keyword arguments
