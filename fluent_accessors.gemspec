@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = FluentAccessors::VERSION
   spec.authors       = ["Eduardo Turiño"]
   spec.email         = ["(none)"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Gem that provides a macro for creating fluent accessors for instance variables, working similar to attr_accessor}
+  # spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
