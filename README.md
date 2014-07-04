@@ -1,6 +1,10 @@
 # FluentAccessors
 
-TODO: Write a gem description
+Adds class method `fluent_accessor` which will create several methods to enable fluent API access to the instance variables.
+
+## Dependencies
+
+it requires Ruby 2, since it uses keyword arguments
 
 ## Installation
 
@@ -18,7 +22,69 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Basic usage
+
+```ruby
+class TestKlass
+  extend FluentAccessors
+  fluent_accessor :something
+end
+
+x = TestKlass.new
+
+# normal setter
+x.something = 1
+
+# normal getter
+x.something # => 1
+
+# fluent setter method
+x.set_something 2 # returns self
+x.something # => 2
+
+# using getter with argument => fluent method
+x.something 3 # returns self
+x.something # => 3
+```
+
+### fluent method
+
+the Fluent method (getter with an argument) will:
+
+1. always return `self`
+2. it will *not* set the value directly:
+  a. if the object responds to a `set_myproperty` method, it will call that and assume that it will
+  b. if the object does not respond to a `set_myproperty` method, it will call the normal setter `myproperty=`
+  c. if the object does not respond to a `set_my_property` nor `myproperty=` methods, it will set the property directly.
+
+### avoiding set_something method
+
+if you don't want the `set_something` method, you can specify not to create it.
+
+```ruby
+class TestKlass
+  extend FluentAccessors
+  fluent_accessor :something, set_method: false
+end
+
+x = TestKlass.new
+s.respond_to? :set_method # => false
+```
+
+### avoiding creating the writer method
+
+if you don't want the `something=` method, you can specify not to create it.
+
+```ruby
+class TestKlass
+  extend FluentAccessors
+  fluent_accessor :something, writer_method: false
+end
+
+x = TestKlass.new
+s.respond_to? :something= # => false
+```
+
 
 ## Contributing
 
