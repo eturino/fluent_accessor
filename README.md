@@ -58,9 +58,9 @@ the Fluent method (getter with an argument) will:
 
 1. always return `self`
 2. it will *not* set the value directly:
-  a. if the object responds to a `set_myproperty` method, it will call that and assume that it will
-  b. if the object does not respond to a `set_myproperty` method, it will call the normal setter `myproperty=`
-  c. if the object does not respond to a `set_my_property` nor `myproperty=` methods, it will set the property directly.
+  1. if the object responds to a `set_myproperty` method, it will call that and assume that it will
+  2. if the object does not respond to a `set_myproperty` method, it will call the normal setter `myproperty=`
+  3. if the object does not respond to a `set_my_property` nor `myproperty=` methods, it will set the property directly.
 
 ### avoiding set_something method
 
